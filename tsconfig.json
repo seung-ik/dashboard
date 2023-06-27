@@ -17,7 +17,9 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@style/*": ["src/style/*"]
+      "@style/*": ["src/style/*"],
+      "@pages/*": ["src/pages/*"],
+      "@components/*": ["src/components/*"]
     }
   },
   "include": ["src", "config-overrides.js"]

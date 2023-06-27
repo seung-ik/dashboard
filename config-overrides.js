@@ -7,6 +7,8 @@ module.exports = function override(config, env) {
   config.resolve.alias = {
     "@": path.resolve(__dirname, "src/"),
     "@style": path.resolve(__dirname, "src/style"),
+    "@pages": path.resolve(__dirname, "src/pages"),
+    "@components": path.resolve(__dirname, "src/components"),
   };
   return config;
 };

@@ -4,7 +4,7 @@ const themes = {
   styles: {
     global: {
       'html, body': {
-        backgroundColor: 'white',
+        // backgroundColor: 'gold',
       },
       a: {},
       h1: {},
