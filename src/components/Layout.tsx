@@ -1,13 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
+import { Outlet } from 'react-router-dom';
 
-interface Props {
-  title?: string;
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<Props> = ({ title, children }) => {
+const Layout = () => {
   return (
     <div style={{ width: '100%', minHeight: '100vh', display: 'flex', flex: 1 }}>
       <Nav />
@@ -18,15 +14,15 @@ const Layout: React.FC<Props> = ({ title, children }) => {
           style={{
             backgroundColor: 'gold',
             display: 'flex',
-            justifyContent: 'space-between',
+            justifyContent: 'flex-end',
             padding: '20px',
           }}
         >
-          <div>{title}</div>
           <Link to="/login">로그아웃</Link>
         </div>
-
-        <div>{children}</div>
+        <div>
+          <Outlet />
+        </div>
       </div>
     </div>
   );

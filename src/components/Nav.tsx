@@ -7,7 +7,6 @@ import {
   Box,
   Stack,
 } from '@chakra-ui/react';
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineRight } from 'react-icons/ai';
 
