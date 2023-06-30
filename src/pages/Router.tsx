@@ -9,7 +9,7 @@ const Router = () => {
   return (
     <ReactRoutes>
       <Route path="/" element={<DashBoard />} />
-      <Route path="/login" element={<Login />} />
+      {/* <Route path="/login" element={<Login />} /> */}
       <Route path="/transaction/withdraw" element={<WithdrawHistory />} />
       <Route path="/transaction/swap" element={<SwapHistory />} />
       <Route path="/administrator" element={<AdminAccount />} />
