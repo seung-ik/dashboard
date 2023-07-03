@@ -1,25 +1,20 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Flex, VStack, HStack, Button, Input } from '@chakra-ui/react';
 
 const Login = () => {
   const navigate = useNavigate();
   return (
-    <div
-      style={{
-        display: 'flex',
-        width: '100%',
-        height: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <div>Admin Login</div>
-        <input type="text" />
-        <input type="text" />
-        <button onClick={() => navigate('/')}>로그인</button>
-      </div>
-    </div>
+    <Flex flex={1} direction="column" justify={'center'}>
+      <HStack spacing={2}>
+        <VStack spacing={2}>
+          <Input focusBorderColor="purple.400" placeholder="Id" size="md" />
+          <Input focusBorderColor="purple.400" placeholder="Password" size="md" />
+        </VStack>
+        <Button h="100%" w="24" colorScheme="purple" onClick={() => navigate('/')}>
+          로그인
+        </Button>
+      </HStack>
+    </Flex>
   );
 };
 
