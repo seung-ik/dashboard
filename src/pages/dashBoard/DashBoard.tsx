@@ -1,5 +1,7 @@
+import { Flex } from '@chakra-ui/react';
+
 const DashBoard = () => {
-  return <div style={{ backgroundColor: 'yellow' }}>대시보드</div>;
+  return <Flex flex={1}>대시보드</Flex>;
 };
 
 export default DashBoard;

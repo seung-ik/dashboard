@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 const FullLayout = () => {
   return (
@@ -12,7 +13,7 @@ const FullLayout = () => {
         alignItems: 'center',
       }}
     >
-      error
+      <Outlet />
     </div>
   );
 };
