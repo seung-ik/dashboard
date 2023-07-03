@@ -1,65 +1,56 @@
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
-  Box,
-  Stack,
-} from '@chakra-ui/react';
-import React from 'react';
+import { Flex } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import { AiOutlineRight } from 'react-icons/ai';
+import LinkButtons from './LinkButtons';
 
 const Nav = () => {
   return (
-    <div
-      style={{
-        border: '2px solid black',
-        width: '284px',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <Accordion defaultIndex={[0]} allowMultiple>
-        <AccordionItem>
-          <AccordionButton>
-            <Link to="/" style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
-              <Box flex={1} textAlign="left">
-                dashboard
-              </Box>
-              <AiOutlineRight size={12} />
-            </Link>
-          </AccordionButton>
-        </AccordionItem>
+    <Flex direction="column" w="64" bg="purple.200" px="4" py="16">
+      <Link to="/">dashboard</Link>
+      <LinkButtons
+        to={[
+          { path: '/transaction/withdraw', name: '출금 내역 관리' },
+          { path: '/transaction/swap', name: '스왑 내역 관리' },
+        ]}
+      >
+        거래내역
+      </LinkButtons>
+      <LinkButtons
+        to={[
+          { path: '/balance/tokens', name: '토큰 리스트' },
+          { path: '/balance/point', name: '포인트 지급/회수' },
+          { path: '/balance/swap/token', name: '스왑 토큰 관리' },
+        ]}
+      >
+        토큰/포인트 관리
+      </LinkButtons>
+      <LinkButtons
+        to={[
+          { path: '/users', name: '회원 리스트' },
+          { path: '/users/deleted', name: '탈퇴 회원 리스트' },
+        ]}
+      >
+        회원 관리
+      </LinkButtons>
+      <LinkButtons
+        to={[
+          { path: '/service/notice', name: '공지사항' },
+          { path: '/service/faq', name: '자주 하는 질문' },
+          { path: '/service/policy', name: '기본 정책 관리' },
+        ]}
+      >
+        고객센터
+      </LinkButtons>
+      <LinkButtons
+        to={[
+          { path: '/notification/banner', name: '배너 관리' },
+          { path: '/notification/popup', name: '팝업 관리' },
+        ]}
+      >
+        팝업/배터 관리
+      </LinkButtons>
 
-        <AccordionItem>
-          <AccordionButton>
-            <Box as="span" flex="1" textAlign="left">
-              거래 내역
-            </Box>
-            <AccordionIcon />
-          </AccordionButton>
-          <AccordionPanel pb={4}>
-            <Stack pl={4}>
-              <Link to="/transaction/swap">스왑 내역</Link>
-              <Link to="/transaction/withdraw">출금 내역</Link>
-            </Stack>
-          </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem>
-          <AccordionButton>
-            <Link to="/administrator" style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
-              <Box flex={1} textAlign="left">
-                관리자 계정 관리
-              </Box>
-              <AiOutlineRight size={12} />
-            </Link>
-          </AccordionButton>
-        </AccordionItem>
-      </Accordion>
-    </div>
+      <Link to="/administrator">관리자 계정 관리</Link>
+    </Flex>
   );
 };
 

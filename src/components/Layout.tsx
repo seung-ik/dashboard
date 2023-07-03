@@ -1,34 +1,21 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
+import { Outlet } from 'react-router-dom';
+import { Flex } from '@chakra-ui/react';
 
-interface Props {
-  title?: string;
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<Props> = ({ title, children }) => {
+const Layout = () => {
   return (
-    <div style={{ width: '100%', minHeight: '100vh', display: 'flex', flex: 1 }}>
+    <Flex height="100vh">
       <Nav />
-      <div
-        style={{ flex: 4, border: '2px solid purple', display: 'flex', flexDirection: 'column' }}
-      >
-        <div
-          style={{
-            backgroundColor: 'gold',
-            display: 'flex',
-            justifyContent: 'space-between',
-            padding: '20px',
-          }}
-        >
-          <div>{title}</div>
+      <Flex direction="column" flex={1}>
+        <Flex bg="gray.100" height={16} align={'center'} justify="flex-end" p={4}>
           <Link to="/login">로그아웃</Link>
-        </div>
-
-        <div>{children}</div>
-      </div>
-    </div>
+        </Flex>
+        <Flex flex={1} width={'100%'}>
+          <Outlet />
+        </Flex>
+      </Flex>
+    </Flex>
   );
 };
 
