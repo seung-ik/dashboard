@@ -9,6 +9,9 @@ module.exports = function override(config, env) {
     "@style": path.resolve(__dirname, "src/style"),
     "@pages": path.resolve(__dirname, "src/pages"),
     "@components": path.resolve(__dirname, "src/components"),
+    "@store": path.resolve(__dirname, "src/store"),
+    "@types": path.resolve(__dirname, "src/types"),
+    "@hooks": path.resolve(__dirname, "src/hooks"),
   };
   return config;
 };

@@ -18,28 +18,46 @@ import Policy from './policy';
 import Banner from './banner';
 import PopUp from './popUp';
 
+export enum Paths {
+  Dashboard = '/',
+  WithdrawTx = '/transaction/withdraw',
+  SwapTx = '/transaction/swap',
+  TokenBalance = '/balance/tokens',
+  PointBalance = '/balance/point',
+  SwapToken = '/balance/swap/token',
+  User = '/users',
+  DeletedUser = '/users/deleted',
+  Notice = '/service/notice',
+  FAQ = '/service/faq',
+  Policy = '/service/policy',
+  Banner = '/notification/banner',
+  Popup = '/notification/popup',
+  Administrator = '/administrator',
+  Login = '/login',
+}
+
 const Router = () => {
   return (
     <>
       <ReactRoutes>
         <Route element={<Layout />}>
-          <Route path="/" element={<DashBoard />} />
-          <Route path="transaction/withdraw" element={<WithdrawHistory />} />
-          <Route path="transaction/swap" element={<SwapHistory />} />
-          <Route path="balance/tokens" element={<Tokens />} />
-          <Route path="balance/point" element={<Point />} />
-          <Route path="balance/swap/token" element={<SwappedToken />} />
-          <Route path="users" element={<Users />} />
-          <Route path="users/deleted" element={<DeletedUsers />} />
-          <Route path="service/notice" element={<Notice />} />
-          <Route path="service/faq" element={<Faq />} />
-          <Route path="service/policy" element={<Policy />} />
-          <Route path="notification/banner" element={<Banner />} />
-          <Route path="notification/popup" element={<PopUp />} />
-          <Route path="administrator" element={<AdminAccount />} />
+          <Route path={Paths.Dashboard} element={<DashBoard />} />
+          <Route path={Paths.WithdrawTx} element={<WithdrawHistory />} />
+          <Route path={Paths.SwapTx} element={<SwapHistory />} />
+          <Route path={Paths.TokenBalance} element={<Tokens />} />
+          <Route path={Paths.PointBalance} element={<Point />} />
+          <Route path={Paths.SwapToken} element={<SwappedToken />} />
+          <Route path={Paths.User} element={<Users />} />
+          <Route path={Paths.DeletedUser} element={<DeletedUsers />} />
+          <Route path={Paths.Notice} element={<Notice />} />
+          <Route path={Paths.FAQ} element={<Faq />} />
+          <Route path={Paths.Policy} element={<Policy />} />
+          <Route path={Paths.Banner} element={<Banner />} />
+          <Route path={Paths.Popup} element={<PopUp />} />
+          <Route path={Paths.Administrator} element={<AdminAccount />} />
         </Route>
         <Route element={<FullLayout />}>
-          <Route path="/login" element={<Login />} />
+          <Route path={Paths.Login} element={<Login />} />
           <Route path="*" element={<div>404</div>} />
         </Route>
       </ReactRoutes>
