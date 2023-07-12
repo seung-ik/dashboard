@@ -17,9 +17,15 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
+      "@layout/*": ["src/components/layout/*"],
+      "@sections/*": ["src/components/sections/*"],
+      "@articles/*": ["src/components/articles/*"],
+      "@components/*": ["src/components/*"],
       "@style/*": ["src/style/*"],
       "@pages/*": ["src/pages/*"],
-      "@components/*": ["src/components/*"]
+      "@store/*": ["src/store/*"],
+      "@types/*": ["src/types/*"],
+      "@hooks/*": ["src/hooks/*"]
     }
   },
   "include": ["src", "config-overrides.js"]
