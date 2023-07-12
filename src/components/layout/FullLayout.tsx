@@ -1,6 +1,5 @@
-import React from 'react';
-import { VStack } from '@chakra-ui/react';
 import { Outlet } from 'react-router-dom';
+import { VStack } from '@chakra-ui/react';
 
 const FullLayout = () => {
   return (

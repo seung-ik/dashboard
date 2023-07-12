@@ -8,7 +8,7 @@ const Login = () => {
       <HStack spacing={2}>
         <VStack spacing={2}>
           <Input focusBorderColor="purple.400" placeholder="Id" size="md" />
-          <Input focusBorderColor="purple.400" placeholder="Password" size="md" />
+          <Input focusBorderColor="purple.400" placeholder="Password" size="md" type="password" />
         </VStack>
         <Button h="100%" w="24" colorScheme="purple" onClick={() => navigate('/')}>
           로그인

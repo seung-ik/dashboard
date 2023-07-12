@@ -1,8 +1,7 @@
-import * as React from 'react';
+import { RecoilRoot } from 'recoil';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from '@style/theme';
 import Router from '@pages/Router';
-import { RecoilRoot } from 'recoil';
 
 export const App = () => (
   <RecoilRoot>
@@ -11,6 +10,3 @@ export const App = () => (
     </ChakraProvider>
   </RecoilRoot>
 );
-
-// import { ColorModeSwitcher } from '@style/ColorModeSwitcher';
-// <ColorModeSwitcher justifySelf="flex-end" />

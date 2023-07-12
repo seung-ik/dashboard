@@ -9,8 +9,8 @@ import {
   GrSecure,
 } from 'react-icons/gr';
 import { Paths } from '@pages/Router';
-import LinkButtons from './LinkButtons';
-import NavItem from './NavItem';
+import NavItem from '@articles/NavItem';
+import MenuButtons from '@articles/MenuButtons';
 
 const Sidebar = () => {
   const { pathname } = useLocation();
@@ -23,7 +23,7 @@ const Sidebar = () => {
         active={pathname === Paths.Dashboard}
         path={Paths.Dashboard}
       />
-      <LinkButtons
+      <MenuButtons
         currentPath={pathname}
         info={[
           {
@@ -37,8 +37,8 @@ const Sidebar = () => {
         ]}
       >
         <NavItem title="거래내역" icon={GrTransaction} active={false} />
-      </LinkButtons>
-      <LinkButtons
+      </MenuButtons>
+      <MenuButtons
         currentPath={pathname}
         info={[
           { path: Paths.TokenBalance, title: '토큰 리스트' },
@@ -47,8 +47,8 @@ const Sidebar = () => {
         ]}
       >
         <NavItem title="토큰 / 포인트 관리" icon={GrWaypoint} active={false} />
-      </LinkButtons>
-      <LinkButtons
+      </MenuButtons>
+      <MenuButtons
         currentPath={pathname}
         info={[
           { path: Paths.User, title: '회원 리스트' },
@@ -56,26 +56,26 @@ const Sidebar = () => {
         ]}
       >
         <NavItem title="회원 관리" icon={GrUserSettings} active={false} />
-      </LinkButtons>
-      <LinkButtons
+      </MenuButtons>
+      <MenuButtons
+        currentPath={pathname}
         info={[
           { path: Paths.Notice, title: '공지사항' },
           { path: Paths.FAQ, title: '자주 하는 질문' },
           { path: Paths.Policy, title: '기본 정책 관리' },
         ]}
-        currentPath={pathname}
       >
         <NavItem title="고객센터" icon={RiQuestionAnswerLine} active={false} />
-      </LinkButtons>
-      <LinkButtons
+      </MenuButtons>
+      <MenuButtons
+        currentPath={pathname}
         info={[
           { path: Paths.Banner, title: '배너 관리' },
           { path: Paths.Popup, title: '팝업 관리' },
         ]}
-        currentPath={pathname}
       >
         <NavItem title="팝업 / 배너 관리" icon={GrNotification} active={false} />
-      </LinkButtons>
+      </MenuButtons>
       <NavItem
         title="관리자 계정 관리"
         icon={GrSecure}

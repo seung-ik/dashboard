@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Flex } from '@chakra-ui/react';
-import AlertButton from './AlertButton';
+import AlertButton from '@articles/AlertButton';
 
 const Header = () => {
   const navigate = useNavigate();

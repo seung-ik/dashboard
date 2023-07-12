@@ -1,6 +1,6 @@
 import { Route, Routes as ReactRoutes } from 'react-router-dom';
-import Layout from '@components/Layout';
-import FullLayout from '@components/FullLayout';
+import Layout from '@components/layout/Layout';
+import FullLayout from '@components/layout/FullLayout';
 
 import DashBoard from './dashBoard';
 import Login from './login';

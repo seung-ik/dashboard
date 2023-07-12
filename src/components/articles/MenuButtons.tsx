@@ -8,7 +8,7 @@ interface Props {
   info: { path: Paths; title: string }[];
   currentPath: string;
 }
-const LinkButtons: React.FC<Props> = ({ children, info, currentPath }) => {
+const MenuButtons: React.FC<Props> = ({ children, info, currentPath }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -42,4 +42,4 @@ const LinkButtons: React.FC<Props> = ({ children, info, currentPath }) => {
   );
 };
 
-export default LinkButtons;
+export default MenuButtons;
